@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iZettle Capital case study</title>
 <script src="./support.js"></script>
 </head>
@@ -20,6 +21,8 @@ a[aria-label]:hover img{opacity:.65}
 .nav a:not(.btn):hover{color:#BA1414}
 button{cursor:pointer;transition:filter .15s,transform .15s}
 button:not(.tl-c):not(:disabled):hover{filter:brightness(.92)}
+@media (max-width:640px){a[aria-label]{padding:2px 0}.nav a:not(.btn){min-width:44px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 body{margin:0;background:#ffffff;color:#111111;font-family:'Nunito Sans',system-ui,sans-serif}
 a{color:inherit}
 a:focus-visible{outline:3px solid #111111;outline-offset:3px}
@@ -38,12 +41,12 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 
 <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:28px 0">
 <a href="index.html" aria-label="Back to portfolio"><img src="assets/93b14b63745216105e5335d419886d8f.png" alt="rw" style="height:40px;width:auto;display:block"></a>
-<a href="index.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:10px 0">Back to selected work</a>
+<a href="index.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:12px 0">Back to selected work</a>
 </div>
 
 <div style="display:flex;flex-direction:column;gap:28px;padding:72px 0 64px">
 <div class="lab">Case study, 2019</div>
-<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:88px;line-height:0.98;letter-spacing:-0.03em;text-wrap:balance;max-width:980px">iZettle Capital: <span style="color:{{accent}}">Defaults</span></h1>
+<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(44px,12vw,88px);line-height:0.98;letter-spacing:-0.03em;text-wrap:balance;max-width:980px">iZettle Capital: <span style="color:{{accent}}">Defaults</span></h1>
 <p style="margin:0;font-size:22px;line-height:1.5;max-width:720px;color:#2b2b29">Understanding why small business owners fell behind on loan repayments, and designing a way to keep them on track.</p>
 </div>
 
@@ -60,12 +63,12 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 <div style="max-width:1200px;margin:0 auto;padding:80px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px 80px;align-items:center">
 <div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px">
 <div class="lab">The problem</div>
-<div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:88px;line-height:1;letter-spacing:-0.02em;color:{{accent}}">14%</div>
+<div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(44px,12vw,88px);line-height:1;letter-spacing:-0.02em;color:{{accent}}">14%</div>
 <p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">of iZettle Advance loan customers underperformed in the repayment flow. They repaid late or not at all.</p>
 </div>
 <div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px">
 <div class="lab">The result</div>
-<div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:140px;line-height:0.9;letter-spacing:-0.02em;color:#111111">20%</div>
+<div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(72px,19vw,140px);line-height:0.9;letter-spacing:-0.02em;color:#111111">20%</div>
 <p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">fewer defaults after the new repayment experience launched.</p>
 </div>
 </div>
@@ -80,7 +83,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 
 <div style="display:flex;flex-wrap:wrap;gap:24px 80px">
 <div style="flex:0 0 200px"><h2 class="lab" style="margin:0;padding-top:10px">The question</h2></div>
-<p style="flex:1 1 480px;margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:44px;line-height:1.1;letter-spacing:-0.02em;max-width:760px;text-wrap:balance">How might we reduce the current loan default rate of 14%?</p>
+<p style="flex:1 1 480px;margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(28px,7vw,44px);line-height:1.1;letter-spacing:-0.02em;max-width:760px;text-wrap:balance">How might we reduce the current loan default rate of 14%?</p>
 </div>
 
 <div style="display:flex;flex-wrap:wrap;gap:24px 80px">
@@ -143,7 +146,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 <p style="flex:1 1 480px;margin:0;font-size:22px;line-height:1.55;max-width:760px">A second workshop asked how we could make it easier for the customer to repay. Ideas for each theme were then placed on a value and effort grid. Design, Credit and backend solutions were sorted into separate backlogs, and the design solution that ranked highest was the traffic light.</p>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px">
-<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/9385e75c8b82e7bd9fcfcaba221fd1aa.jpg" alt="Workshop group writing solution ideas on sticky notes" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Solution ideas for each theme</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/2765b391aa6b8ab747592fada3e34910.jpg" alt="Value and effort grid filled with sticky notes" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Ideas placed by value and effort</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/9385e75c8b82e7bd9fcfcaba221fd1aa.jpg" alt="Workshop group writing solution ideas on sticky notes" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Solution ideas for each theme</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/2765b391aa6b8ab747592fada3e34910.jpg" alt="Value and effort grid filled with sticky notes" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Ideas placed by value and effort</span></div>
 </div>
 </div>
 
@@ -152,12 +155,12 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 <div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:40px">
 <p style="margin:0;font-size:22px;line-height:1.55;max-width:760px">A traffic light banner in the loan repayment dashboard. It changes colour and message based on repayment status, and shows whether a merchant is falling behind, why, and what to do to keep up.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px">
-<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/705f3fd53f25b84842f416cda488066f.jpg" alt="Whiteboard with the repayment timeline and sticky notes for each notification" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Mapping the notifications along the repayment timeline</span></div>
-<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/813e6edd9a4ae8d44fe655ec844c5578.webp" alt="Early sketches of a warning in the back office and app" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Early sketches: hard to repay</span></div>
-<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/27f45afdb09bde6aa8ec4cb4b386ff65.webp" alt="Sketches for managing expectations from the start" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Early sketches: manage expectations from the start</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/705f3fd53f25b84842f416cda488066f.jpg" alt="Whiteboard with the repayment timeline and sticky notes for each notification" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Mapping the notifications along the repayment timeline</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/813e6edd9a4ae8d44fe655ec844c5578.webp" alt="Early sketches of a warning in the back office and app" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Early sketches: hard to repay</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/27f45afdb09bde6aa8ec4cb4b386ff65.webp" alt="Sketches for managing expectations from the start" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Early sketches: manage expectations from the start</span></div>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px">
-<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/3f4f2bfdafe8c8d126b3443e7af5a019.webp" alt="Your Cash Advance dashboard with three status colours, green, yellow and red" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">The repayment dashboard and its three status colours</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/3f4f2bfdafe8c8d126b3443e7af5a019.webp" alt="Your Cash Advance dashboard with three status colours, green, yellow and red" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">The repayment dashboard and its three status colours</span></div>
 
 </div>
 </div>
@@ -170,7 +173,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">
 <sc-for list="{{chips}}" as="c" hint-placeholder-count="9"><button type="button" class="tl-c" onClick="{{c.pick}}" style="border-color:{{c.border}};background:{{c.bg}}"><span style="display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px"><span style="width:12px;height:12px;border-radius:50%;background:{{c.dot}}"></span>{{c.name}}</span><span style="font-size:13px;color:#5a5a57">{{c.days}}</span></button></sc-for>
 </div>
-<div style="font-size:15px;color:#5a5a57">{{ruleText}}</div>
+<div style="font-size:16px;color:#5a5a57">{{ruleText}}</div>
 
 <div><div style="overflow:hidden;border:1px solid #dcdcd8;background:#fafafa;font-family:'Nunito Sans',system-ui,sans-serif;color:#222222">
 <div style="background:#2b3060;color:#ffffff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:8px 32px;min-height:60px;gap:8px 24px;font-size:13px;box-sizing:border-box"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 30px"><span style="font-weight:800;font-size:24px;letter-spacing:-0.02em;margin-right:12px">iZettle</span><span style="color:#ffffff">Overview</span><span style="color:#ffffff">Sales</span><span style="color:#ffffff">Reports</span><span style="color:#ffffff">Products</span><span style="color:#a999dc">Funding</span><span style="color:#ffffff">E-commerce</span></div><div style="display:flex;align-items:center;gap:14px">Company Name<span style="width:34px;height:34px;border-radius:50%;background:#ffffff;color:#2b3060;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:12px">CN</span></div></div>
@@ -258,7 +261,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 
 <div style="background:#111111;color:#ffffff">
 <div style="max-width:1200px;margin:0 auto;padding:72px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center">
-<div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="color:#b9b9b4">Next</span><a href="AdvanceJourney.dc.html" style="font-family:'Jost',sans-serif;font-weight:600;font-size:40px;letter-spacing:-0.02em;color:#ffffff;text-decoration:none">iZettle Advance: Customer journey</a></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="color:#b9b9b4">Next</span><a href="AdvanceJourney.dc.html" style="font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(28px,7vw,40px);letter-spacing:-0.02em;color:#ffffff;text-decoration:none">iZettle Advance: Customer journey</a></div>
 <a href="index.html" style="font-family:'Jost',sans-serif;font-weight:500;font-size:18px;color:#ffffff;padding:12px 0">Back to selected work</a>
 </div>
 </div>

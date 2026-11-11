@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PayPal Invoicing prototype</title>
 <script src="./support.js"></script>
 </head>
@@ -20,6 +21,8 @@ a[aria-label]:hover img{opacity:.65}
 .nav a:not(.btn):hover{color:#BA1414}
 button{cursor:pointer;transition:filter .15s,transform .15s}
 button:not(.tl-c):not(:disabled):hover{filter:brightness(.92)}
+@media (max-width:640px){a[aria-label]{padding:2px 0}.nav a:not(.btn){min-width:44px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 body{margin:0;background:#ffffff;color:#111111;font-family:'Nunito Sans',system-ui,sans-serif}
 a{color:inherit}
 .vh{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
@@ -50,7 +53,7 @@ a{color:inherit}
 <div style="max-width:1280px;margin:0 auto;padding:0 32px 72px;box-sizing:border-box;position:relative">
 <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:28px 0">
 <a href="index.html" aria-label="Back to portfolio"><img src="assets/93b14b63745216105e5335d419886d8f.png" alt="rw" style="height:40px;width:auto;display:block"></a>
-<a href="PayPalInvoicing.dc.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:10px 0">Back to the case study</a>
+<a href="PayPalInvoicing.dc.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:12px 0">Back to the case study</a>
 </div>
 <div style="display:flex;flex-direction:column;gap:12px;padding:24px 0 32px"><div style="font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#5a5a57">Prototype</div><h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:56px;line-height:1;letter-spacing:-0.03em">Send your first <span style="color:#BA1414">invoice</span></h1><p style="margin:0;font-size:20px;line-height:1.5;max-width:720px;color:#2b2b29">The final design, screen by screen. Click through the flow as a new customer would.</p></div>
 <input type="radio" name="step" id="r1" class="vh" checked><input type="radio" name="step" id="r2" class="vh"><input type="radio" name="step" id="r3" class="vh"><input type="radio" name="step" id="r4" class="vh"><input type="radio" name="step" id="r5" class="vh"><input type="checkbox" id="showhot" class="vh">

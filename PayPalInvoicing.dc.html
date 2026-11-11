@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PayPal Invoicing case study</title>
 <script src="./support.js"></script>
 </head>
@@ -20,6 +21,8 @@ a[aria-label]:hover img{opacity:.65}
 .nav a:not(.btn):hover{color:#BA1414}
 button{cursor:pointer;transition:filter .15s,transform .15s}
 button:not(.tl-c):not(:disabled):hover{filter:brightness(.92)}
+@media (max-width:640px){a[aria-label]{padding:2px 0}.nav a:not(.btn){min-width:44px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 body{margin:0;background:#ffffff;color:#111111;font-family:'Nunito Sans',system-ui,sans-serif}
 a{color:inherit}
 a:focus-visible{outline:3px solid #111111;outline-offset:3px}
@@ -61,12 +64,12 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 
 <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:28px 0">
 <a href="index.html" aria-label="Back to portfolio"><img src="assets/93b14b63745216105e5335d419886d8f.png" alt="rw" style="height:40px;width:auto;display:block"></a>
-<a href="index.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:10px 0">Back to selected work</a>
+<a href="index.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:12px 0">Back to selected work</a>
 </div>
 
 <div style="display:flex;flex-direction:column;gap:28px;padding:72px 0 64px">
 <div class="lab">Case study, 2023</div>
-<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:88px;line-height:0.98;letter-spacing:-0.03em;text-wrap:balance;max-width:980px">PayPal <span style="color:{{accent}}">Invoicing</span></h1>
+<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(44px,12vw,88px);line-height:0.98;letter-spacing:-0.03em;text-wrap:balance;max-width:980px">PayPal <span style="color:{{accent}}">Invoicing</span></h1>
 <p style="margin:0;font-size:22px;line-height:1.5;max-width:720px;color:#2b2b29">Simplifying the first invoice a seller creates, so more new users finish it and get paid.</p>
 </div>
 
@@ -82,12 +85,12 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 <div style="max-width:1200px;margin:0 auto;padding:80px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px 80px;align-items:center">
 <div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px">
 <div class="lab">Conversion lift</div>
-<div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:140px;line-height:0.9;letter-spacing:-0.02em;color:#111111">5%</div>
+<div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(72px,19vw,140px);line-height:0.9;letter-spacing:-0.02em;color:#111111">5%</div>
 <p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">more new customers sending their first invoice, against a goal of 1.5%.</p>
 </div>
 <div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px">
 <div class="lab">Revenue</div>
-<div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:140px;line-height:0.9;letter-spacing:-0.02em;color:#111111">4x</div>
+<div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(72px,19vw,140px);line-height:0.9;letter-spacing:-0.02em;color:#111111">4x</div>
 <p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">annual revenue lift compared with what was planned.</p>
 </div>
 </div>
@@ -107,10 +110,10 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 </sc-for>
 </div>
 </div>
-<p style="margin:0 0 0 280px;font-size:19px;line-height:1.5;color:#2b2b29;max-width:700px">There were also gaps in instrumentation, so the team could not see clearly where new users dropped out.</p>
+<p style="margin:0 0 0 clamp(0px,calc(100vw - 740px),280px);font-size:19px;line-height:1.5;color:#2b2b29;max-width:700px">There were also gaps in instrumentation, so the team could not see clearly where new users dropped out.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
-<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/5ec81f52d1b7dcc1cd283eada2f426e6.webp" alt="Old PayPal invoice form: one long page with customer, items, message and more options" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Old design, live when we started</span></div>
-<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/b67bff540a6bfcf0ad9d6d3be232f549.webp" alt="Old PayPal customer information form with billing and shipping address fields" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Old design, customer information form</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/5ec81f52d1b7dcc1cd283eada2f426e6.webp" alt="Old PayPal invoice form: one long page with customer, items, message and more options" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Old design, live when we started</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/b67bff540a6bfcf0ad9d6d3be232f549.webp" alt="Old PayPal customer information form with billing and shipping address fields" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Old design, customer information form</span></div>
 </div>
 </div>
 
@@ -239,8 +242,8 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 <sc-if value="{{s.itemForm}}" hint-placeholder-val="{{ false }}">
 <div style="border:1px solid #6c7378;border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:16px">
 <div style="display:flex;gap:28px;align-items:center;font-size:18px">
-<button type="button" onClick="{{pickGoods}}" aria-pressed="{{draftI.goods}}" style="display:inline-flex;align-items:center;gap:10px;border:0;background:none;font-size:18px;font-family:inherit;padding:6px 0;color:#2c2e2f"><span style="width:22px;height:22px;box-sizing:border-box;border-radius:50%;border:2px solid {{draftI.goodsBorder}};display:inline-flex;align-items:center;justify-content:center"><span style="width:11px;height:11px;border-radius:50%;background:{{draftI.goodsDot}}"></span></span>Goods</button>
-<button type="button" onClick="{{pickServices}}" aria-pressed="{{draftI.services}}" style="display:inline-flex;align-items:center;gap:10px;border:0;background:none;font-size:18px;font-family:inherit;padding:6px 0;color:#2c2e2f"><span style="width:22px;height:22px;box-sizing:border-box;border-radius:50%;border:2px solid {{draftI.servicesBorder}};display:inline-flex;align-items:center;justify-content:center"><span style="width:11px;height:11px;border-radius:50%;background:{{draftI.servicesDot}}"></span></span>Services</button>
+<button type="button" onClick="{{pickGoods}}" aria-pressed="{{draftI.goods}}" style="display:inline-flex;align-items:center;gap:10px;border:0;background:none;font-size:18px;font-family:inherit;padding:12px 0;color:#2c2e2f"><span style="width:22px;height:22px;box-sizing:border-box;border-radius:50%;border:2px solid {{draftI.goodsBorder}};display:inline-flex;align-items:center;justify-content:center"><span style="width:11px;height:11px;border-radius:50%;background:{{draftI.goodsDot}}"></span></span>Goods</button>
+<button type="button" onClick="{{pickServices}}" aria-pressed="{{draftI.services}}" style="display:inline-flex;align-items:center;gap:10px;border:0;background:none;font-size:18px;font-family:inherit;padding:12px 0;color:#2c2e2f"><span style="width:22px;height:22px;box-sizing:border-box;border-radius:50%;border:2px solid {{draftI.servicesBorder}};display:inline-flex;align-items:center;justify-content:center"><span style="width:11px;height:11px;border-radius:50%;background:{{draftI.servicesDot}}"></span></span>Services</button>
 </div>
 <input aria-label="Name" placeholder="Name" value="{{draftI.name}}" onInput="{{setIName}}" class="inp" style="height:64px">
 <div style="display:flex;gap:12px">
@@ -301,7 +304,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 <div style="display:flex;flex-direction:column;gap:6px"><span style="font-weight:800;font-size:19px">Renata Westenberger</span><span style="display:block;width:92px;height:11px;background:#d8d8d8;border-radius:3px;filter:blur(3px)"></span><span style="display:block;width:30px;height:11px;background:#d8d8d8;border-radius:3px;filter:blur(3px)"></span><span style="display:block;width:122px;height:11px;background:#d8d8d8;border-radius:3px;filter:blur(3px)"></span><span style="font-size:13px">SWEDEN</span></div>
 <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-end;font-size:14px;padding-top:6px"><span>Invoice #0006</span><span>Issued : 28 Mar 2024</span><span>Due : {{dueLong}}</span></div>
 </div>
-<div style="text-align:right;font-size:44px;font-weight:500;color:#0b1b4d;margin-top:24px">{{totals.total}}</div>
+<div style="text-align:right;font-size:clamp(28px,7vw,44px);font-weight:500;color:#0b1b4d;margin-top:24px">{{totals.total}}</div>
 </div>
 <div style="background:#f0eeea;padding:8px 36px;font-size:13px;display:flex;gap:28px;align-items:center"><span style="display:inline-flex;align-items:center;gap:6px"><svg width="12" height="14" viewBox="0 0 12 16" aria-hidden="true"><rect x="1" y="0" width="10" height="16" rx="1.5" fill="#2c2e2f"/></svg>+46 7* *** 57 77</span><span style="display:inline-flex;align-items:center;gap:8px"><svg width="14" height="12" viewBox="0 0 16 12" aria-hidden="true"><path d="M0 0h16v12H0z" fill="#2c2e2f"/><path d="M0 1l8 6 8-6" stroke="#f0eeea" stroke-width="1.5" fill="none"/></svg>renata.westenberger@gma...</span></div>
 <div style="padding:24px 36px 36px;display:flex;flex-direction:column;gap:22px;min-height:200px">
@@ -329,7 +332,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px">
 <div style="display:flex;flex-direction:column;gap:6px">
 <button type="button" onClick="{{back}}" style="display:inline-flex;align-items:center;gap:10px;border:0;background:none;padding:0;color:#0070e0;font-weight:800;font-size:16px;font-family:inherit;align-self:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2c2e2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg>Back to invoices</button>
-<h3 style="margin:0;font-family:'Nunito Sans',system-ui,sans-serif;font-weight:400;font-size:40px;letter-spacing:-0.01em;color:#0b1b4d;line-height:1.1">New invoice #(0007)</h3>
+<h3 style="margin:0;font-family:'Nunito Sans',system-ui,sans-serif;font-weight:400;font-size:clamp(28px,7vw,40px);letter-spacing:-0.01em;color:#0b1b4d;line-height:1.1">New invoice #(0007)</h3>
 </div>
 <div style="display:flex;align-items:center;gap:20px">
 <span style="display:inline-flex;align-items:center;gap:14px;font-size:16px">New version <button type="button" onClick="{{toggleVersion}}" aria-label="New version" aria-pressed="false" style="display:inline-flex;align-items:center;justify-content:flex-start;width:48px;height:30px;box-sizing:border-box;border-radius:15px;border:1.5px solid #b9b3a8;background:#ebe8e3;padding:2px"><span style="width:24px;height:24px;border-radius:50%;background:#ffffff;border:1px solid #b9b3a8;box-sizing:border-box"></span></button></span>
@@ -469,7 +472,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 </div></div>
 <div style="display:flex;flex-wrap:wrap;gap:24px 80px;padding-top:24px">
 <div style="flex:0 0 200px"><h3 class="lab" style="margin:0;padding-top:10px">The real thing</h3></div>
-<div style="flex:1 1 480px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 32px"><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/d38e6893b39ec66dc451fe9f49cfaf22.png" alt="Start a new invoice" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Start a new invoice</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/a1ffd95c45d8fdb79381a04e2afc7482.png" alt="Create a new customer" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Create a new customer</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/f3f7e933be5238683180289cf637be18.png" alt="Add an item" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Add an item</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/fd79c036c725a8a0919dd2b6b7568913.png" alt="Customer and item added" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Customer and item added</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/6a41121c3fb5c026d966def274a4165f.png" alt="Sent, with a link to share" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Sent, with a link to share</span></div></div>
+<div style="flex:1 1 480px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 32px"><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/d38e6893b39ec66dc451fe9f49cfaf22.png" alt="Start a new invoice" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Start a new invoice</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/a1ffd95c45d8fdb79381a04e2afc7482.png" alt="Create a new customer" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Create a new customer</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/f3f7e933be5238683180289cf637be18.png" alt="Add an item" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Add an item</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/fd79c036c725a8a0919dd2b6b7568913.png" alt="Customer and item added" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Customer and item added</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/6a41121c3fb5c026d966def274a4165f.png" alt="Sent, with a link to share" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:16px;color:#5a5a57">Sent, with a link to share</span></div></div>
 </div>
 </div>
 
@@ -487,7 +490,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 
 <div style="background:#111111;color:#ffffff">
 <div style="max-width:1200px;margin:0 auto;padding:72px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center">
-<div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="color:#b9b9b4">Next</span><a href="ZettleTerminal.dc.html" style="font-family:'Jost',sans-serif;font-weight:600;font-size:40px;letter-spacing:-0.02em;color:#ffffff;text-decoration:none">Zettle Terminal</a></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="color:#b9b9b4">Next</span><a href="ZettleTerminal.dc.html" style="font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(28px,7vw,40px);letter-spacing:-0.02em;color:#ffffff;text-decoration:none">Zettle Terminal</a></div>
 <a href="index.html" style="font-family:'Jost',sans-serif;font-weight:500;font-size:18px;color:#ffffff;padding:12px 0">Back to selected work</a>
 </div>
 </div>

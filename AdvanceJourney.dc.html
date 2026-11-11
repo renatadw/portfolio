@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iZettle Advance customer journey case study</title>
 <script src="./support.js"></script>
 </head>
@@ -20,6 +21,8 @@ a[aria-label]:hover img{opacity:.65}
 .nav a:not(.btn):hover{color:#BA1414}
 button{cursor:pointer;transition:filter .15s,transform .15s}
 button:not(.tl-c):not(:disabled):hover{filter:brightness(.92)}
+@media (max-width:640px){a[aria-label]{padding:2px 0}.nav a:not(.btn){min-width:44px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 body{margin:0;background:#ffffff;color:#111111;font-family:'Nunito Sans',system-ui,sans-serif}
 a{color:inherit}
 a:focus-visible{outline:3px solid #111111;outline-offset:3px}
@@ -32,12 +35,12 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 
 <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:28px 0">
 <a href="index.html" aria-label="Back to portfolio"><img src="assets/93b14b63745216105e5335d419886d8f.png" alt="rw" style="height:40px;width:auto;display:block"></a>
-<a href="index.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:10px 0">Back to selected work</a>
+<a href="index.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:12px 0">Back to selected work</a>
 </div>
 
 <div style="display:flex;flex-direction:column;gap:28px;padding:72px 0 64px">
 <div class="lab">Case study, 2019</div>
-<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:88px;line-height:0.98;letter-spacing:-0.03em;text-wrap:balance;max-width:980px">iZettle Advance: <span style="color:{{accent}}">Customer journey</span></h1>
+<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(44px,12vw,88px);line-height:0.98;letter-spacing:-0.03em;text-wrap:balance;max-width:980px">iZettle Advance: <span style="color:{{accent}}">Customer journey</span></h1>
 <p style="margin:0;font-size:22px;line-height:1.5;max-width:720px;color:#2b2b29">Mapping the Advance customer journey to close knowledge gaps, spot opportunities and shape the product's future vision and audience.</p>
 </div>
 
@@ -51,8 +54,8 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 
 <div style="background:#f6f6f4">
 <div style="max-width:1200px;margin:0 auto;padding:80px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px 80px;align-items:center">
-<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px"><div class="lab">Interviews</div><div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:140px;line-height:0.9;letter-spacing:-0.02em;color:#111111">20</div><p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">merchants and customers interviewed in London, on top of earlier research rounds.</p></div>
-<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px"><div class="lab">The result</div><div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:72px;line-height:1;letter-spacing:-0.02em;color:#111111">2020 roadmap</div><p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">the journey became the foundation for the following year's roadmap.</p></div>
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px"><div class="lab">Interviews</div><div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(72px,19vw,140px);line-height:0.9;letter-spacing:-0.02em;color:#111111">20</div><p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">merchants and customers interviewed in London, on top of earlier research rounds.</p></div>
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px"><div class="lab">The result</div><div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(44px,12vw,72px);line-height:1;letter-spacing:-0.02em;color:#111111">2020 roadmap</div><p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">the journey became the foundation for the following year's roadmap.</p></div>
 </div>
 </div>
 
@@ -81,7 +84,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 
 <div style="display:flex;flex-wrap:wrap;gap:24px 80px">
 <div style="flex:0 0 200px"><h2 class="lab" style="margin:0;padding-top:10px">Research in action</h2></div>
-<div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:40px"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:32px"><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/2d3c102ae1a4dda50d0847d4541b0c10.webp" alt="Interviewer smiling outside a flower stall on a London high street" style="width:100%;height:auto;display:block"><span style="font-size:15px;color:#5a5a57">Out meeting merchants</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/cd436e621704c8d3c6dc74342798674c.png" alt="A participant ordering cards of what matters when choosing a loan" style="width:100%;height:auto;display:block"><span style="font-size:15px;color:#5a5a57">Card sorting with a merchant</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/57e15a0e4d5c2b888b81f3cecbaf032d.webp" alt="Wall of sticky notes mapping the journey in a workshop" style="width:100%;height:auto;display:block"><span style="font-size:15px;color:#5a5a57">Mapping the journey with Zettle experts</span></div></div></div>
+<div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:40px"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:32px"><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/2d3c102ae1a4dda50d0847d4541b0c10.webp" alt="Interviewer smiling outside a flower stall on a London high street" style="width:100%;height:auto;display:block"><span style="font-size:16px;color:#5a5a57">Out meeting merchants</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/cd436e621704c8d3c6dc74342798674c.png" alt="A participant ordering cards of what matters when choosing a loan" style="width:100%;height:auto;display:block"><span style="font-size:16px;color:#5a5a57">Card sorting with a merchant</span></div><div style="display:flex;flex-direction:column;gap:12px"><img src="assets/57e15a0e4d5c2b888b81f3cecbaf032d.webp" alt="Wall of sticky notes mapping the journey in a workshop" style="width:100%;height:auto;display:block"><span style="font-size:16px;color:#5a5a57">Mapping the journey with Zettle experts</span></div></div></div>
 </div>
 
 <div style="display:flex;flex-direction:column;gap:40px"><div style="display:flex;flex-wrap:wrap;gap:24px 80px">
@@ -139,7 +142,7 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 
 <div style="background:#111111;color:#ffffff">
 <div style="max-width:1200px;margin:0 auto;padding:72px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center">
-<div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="color:#b9b9b4">Next</span><a href="Advance2017.dc.html" style="font-family:'Jost',sans-serif;font-weight:600;font-size:40px;letter-spacing:-0.02em;color:#ffffff;text-decoration:none">iZettle Advance</a></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="color:#b9b9b4">Next</span><a href="Advance2017.dc.html" style="font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(28px,7vw,40px);letter-spacing:-0.02em;color:#ffffff;text-decoration:none">iZettle Advance</a></div>
 <a href="index.html" style="font-family:'Jost',sans-serif;font-weight:500;font-size:18px;color:#ffffff;padding:12px 0">Back to selected work</a>
 </div>
 </div>
