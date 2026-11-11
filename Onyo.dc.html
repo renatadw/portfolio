@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Onyo case study</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Nunito+Sans:wght@400;600&display=swap">
+<style>
+body{margin:0;background:#ffffff;color:#111111;font-family:'Nunito Sans',system-ui,sans-serif}
+a{color:inherit}
+a:focus-visible{outline:3px solid #111111;outline-offset:3px}
+.lab{font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#5a5a57}
+.shot{aspect-ratio:4 / 3;background:#efefec;border:2px dashed #b9b9b4;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box;font-size:16px;color:#5a5a57}
+</style>
+</helmet>
+<div style="width:100%;box-sizing:border-box;background:#ffffff">
+<div style="max-width:1200px;margin:0 auto;padding:0 32px;box-sizing:border-box">
+
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:28px 0">
+<a href="index.html" aria-label="Back to portfolio"><img src="assets/93b14b63745216105e5335d419886d8f.png" alt="rw" style="height:40px;width:auto;display:block"></a>
+<a href="index.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:10px 0">Back to selected work</a>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:28px;padding:72px 0 64px">
+<div class="lab">Case study, 2016</div>
+<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:88px;line-height:0.98;letter-spacing:-0.03em;text-wrap:balance;max-width:980px"><span style="color:{{accent}}">Onyo</span></h1>
+<p style="margin:0;font-size:22px;line-height:1.5;max-width:720px;color:#2b2b29">An app that lets people order and pay for food in advance, so they skip the queue.</p>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 40px;border-top:2px solid #111111;padding:24px 0 72px">
+<div style="display:flex;flex-direction:column;gap:6px;padding:8px 0"><span class="lab">Role</span><span style="font-size:19px">Lead UX designer, the sole designer</span></div>
+<div style="display:flex;flex-direction:column;gap:6px;padding:8px 0"><span class="lab">Scope</span><span style="font-size:19px">0 to 1, from user research to final product</span></div>
+<div style="display:flex;flex-direction:column;gap:6px;padding:8px 0"><span class="lab">Launch</span><span style="font-size:19px">A large mall in Rio de Janeiro, a popular lunch spot for professionals</span></div>
+</div>
+
+</div>
+
+<div style="max-width:1200px;margin:0 auto;padding:0 32px 96px;box-sizing:border-box;display:flex;flex-direction:column;gap:56px">
+<p style="margin:0;font-size:22px;line-height:1.55;max-width:760px">The launch strategy targeted a large mall in Rio de Janeiro, where time-pressed professionals value avoiding long lunch queues. I owned the work from user research and concept development to interaction design and final delivery.</p>
+<img src="assets/63040a662f7a4b47c8daaf02bfaf1a0f.webp" alt="Onyo splash screen, login and sign up, and the sign up form" style="width:100%;height:auto;display:block">
+<img src="assets/f51e1046cbcc4708463982f993fbb1c4.webp" alt="Home screen with restaurants, a restaurant home and its menu" style="width:100%;height:auto;display:block">
+<img src="assets/4a4d59a635479bd6011d8f14352729cf.webp" alt="Restaurant menu, food choice and check-out screens" style="width:100%;height:auto;display:block">
+<img src="assets/96c125c43bea9ae1f69727f9a868aa4e.webp" alt="Company confirmation and time estimate, payment method, order confirmed and order status" style="width:100%;height:auto;display:block">
+<img src="assets/a3754b3205cbce9d9fcbd2bd4a998bae.webp" alt="A burger and fries with an Onyo flag saying this one came straight from the phone of the user" style="width:100%;height:auto;display:block">
+</div>
+
+<div style="background:#111111;color:#ffffff">
+<div style="max-width:1200px;margin:0 auto;padding:72px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center">
+<div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="color:#b9b9b4">That is the last one</span><a href="index.html" style="font-family:'Jost',sans-serif;font-weight:600;font-size:40px;letter-spacing:-0.02em;color:#ffffff;text-decoration:none">Back to selected work</a></div>
+<a href="index.html" style="font-family:'Jost',sans-serif;font-weight:500;font-size:18px;color:#ffffff;padding:12px 0">Back to selected work</a>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#BA1414","options":["#BA1414","#1F4FD8","#0B7A5B","#111111"]},"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+renderVals() {
+  const needs = [
+    { title: 'All-in-one', body: 'A flexible device that does not depend on an iPad.' },
+    { title: 'Portability', body: 'Mobile connectivity, so sellers can move away from the counter.' },
+    { title: 'Table service', body: 'Sellers can go to where their customers are.' },
+    { title: 'Barcode scanning', body: 'Saves staff time entering inventory and helps them find products.' }
+  ];
+  return { accent: this.props.accent ?? '#BA1414', needs };
+}
+}
+</script>
+</body>
+</html>
