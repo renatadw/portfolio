@@ -8,8 +8,18 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Nunito+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=DM+Serif+Display&family=Nunito+Sans:wght@400;600&display=swap">
 <style>
+/* hover states */
+a{transition:color .15s,opacity .15s,transform .15s,box-shadow .15s}
+a img{transition:opacity .15s}
+a:not(.row):not(.btn):hover{text-decoration:underline!important;text-underline-offset:5px;text-decoration-thickness:2px}
+a[style*="display:flex"]:not(.row):hover,a[style*="display: flex"]:not(.row):hover{text-decoration:none!important;transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.14)}
+a[aria-label]:hover img{opacity:.65}
+.btn:hover{background:#BA1414!important;border-color:#BA1414!important;color:#ffffff!important}
+.nav a:not(.btn):hover{color:#BA1414}
+button{cursor:pointer;transition:filter .15s,transform .15s}
+button:not(.tl-c):not(:disabled):hover{filter:brightness(.92)}
 body{margin:0;background:#ffffff;color:#111111;font-family:'Nunito Sans',system-ui,sans-serif}
 a{color:inherit}
 .row{display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px;padding:32px 16px;margin:0 -16px;border-top:1px solid #dcdcd8;text-decoration:none;color:#111111;cursor:pointer;transition:background 0.15s}
@@ -26,7 +36,7 @@ a{color:inherit}
 
 <div style="max-width:1200px;margin:0 auto;padding:0 32px;box-sizing:border-box">
 
-<div class="nav" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:28px 0">
+<div class="nav" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:20px 0">
 <a href="#top" aria-label="Renata Westenberger, home"><img src="assets/93b14b63745216105e5335d419886d8f.png" alt="rw" style="height:40px;width:auto;display:block"></a>
 <div style="display:flex;flex-wrap:wrap;gap:8px 32px;font-family:'Jost',sans-serif;font-size:17px;font-weight:500">
 <a href="#work" style="text-decoration:none;padding:10px 0">Selected work</a>
@@ -36,11 +46,11 @@ a{color:inherit}
 </div>
 </div>
 
-<div id="top" style="display:flex;flex-wrap:wrap;gap:48px 80px;padding:96px 0 112px">
-<div style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:32px">
+<div id="top" style="display:flex;flex-wrap:wrap;gap:48px 80px;padding:24px 0 96px">
+<div style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:24px">
 <div style="font-family:'Jost',sans-serif;font-size:15px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#5a5a57">Product design leader, London</div>
-<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:80px;line-height:1;letter-spacing:-0.03em;text-wrap:balance">Hands on, curious, and always better <span style="color:{{accent}}">building together</span>.</h1>
-<p style="margin:0;font-size:21px;line-height:1.55;max-width:600px;color:#2b2b29">Product Design Lead at Kivra, working on payment and invoicing experiences. Previously Above / Eidra and seven years at Zettle / PayPal.</p>
+<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-0.03em;text-wrap:balance">Hands on, curious, and always better <span style="color:{{accent}}">building together</span>.</h1>
+<p style="margin:0;font-size:20px;line-height:1.5;max-width:600px;color:#2b2b29">Product Design Lead at Kivra, working on payment and invoicing experiences. Previously Above / Eidra and seven years at Zettle / PayPal.</p>
 <div style="display:flex;flex-wrap:wrap;gap:16px">
 <a class="btn" href="#work" style="background:#111111;color:#ffffff">See selected work</a>
 <a class="btn" href="Renata-Westenberger-CV.pdf" style="border:2px solid #111111">Read my CV</a>
@@ -73,7 +83,7 @@ a{color:inherit}
 <div style="font-size:17px;color:#5a5a57">{{p.role}}</div>
 </div>
 <div style="flex:1 1 300px;min-width:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px">
-<div style="font-family:'Jost',sans-serif;font-weight:600;font-size:{{p.figSize}};line-height:1;letter-spacing:-0.03em;color:{{accent}}">{{p.figure}}</div>
+<div style="font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:{{p.figSize}};line-height:1;letter-spacing:-0.02em;color:#111111">{{p.figure}}</div>
 <div style="flex:1 1 180px;font-size:17px;line-height:1.4">{{p.caption}}</div>
 </div>
 <div style="flex:0 0 auto;display:flex;align-items:center;gap:14px;font-family:'Jost',sans-serif;font-weight:500;font-size:17px"><span class="circ"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></div>
@@ -122,8 +132,8 @@ class Component extends DCLogic {
 renderVals() {
   const projects = [
     { year: '2023', name: 'PayPal Invoicing', role: 'Design manager, led 2 designers', figure: '4x', caption: 'annual revenue lift versus plan from a simpler first invoice', href: 'PayPalInvoicing.dc.html' },
-    { year: '2021', name: 'Zettle Terminal', role: 'Design manager, led 6 designers', figure: '~10%', caption: 'of Zettle volume processed on Terminal in 2024', href: 'ZettleTerminal.dc.html' },
-    { year: '2019', name: 'iZettle Capital: Defaults', role: 'Senior UX designer', figure: '~20%', caption: 'fewer defaults on iZettle Advance loans', href: 'CaseStudy.dc.html' },
+    { year: '2021', name: 'Zettle Terminal', role: 'Design manager, led 6 designers', figure: '10%', caption: 'of Zettle volume processed on Terminal in 2024', href: 'ZettleTerminal.dc.html' },
+    { year: '2019', name: 'iZettle Capital: Defaults', role: 'Senior UX designer', figure: '20%', caption: 'fewer defaults on iZettle Advance loans', href: 'CaseStudy.dc.html' },
     { year: '2019', name: 'iZettle Advance: Customer journey', role: 'Senior UX designer', figure: '20', caption: 'interviews that became the backbone of the 2020 roadmap', href: 'AdvanceJourney.dc.html' },
     { year: '2017', name: 'iZettle Advance', role: 'UX designer', figure: 'Up', caption: 'conversion after making Advance easier to understand', href: 'Advance2017.dc.html' },
     { year: '2016', name: 'Onyo', role: 'Lead UX designer', figure: '0 to 1', caption: 'sole designer, from research to final product', href: 'Onyo.dc.html' }
