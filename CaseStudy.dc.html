@@ -17,7 +17,10 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 .tl-r{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:5px;background:#e3e3df;outline:none;margin:0;cursor:pointer}
 .tl-r::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:26px;height:26px;border-radius:50%;background:#2b3060;border:0}
 .tl-r::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:#2b3060;border:0}
-.tl-c{display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;border:2px solid #dcdcd8;background:#ffffff;padding:10px 12px;font-family:inherit;cursor:pointer;min-width:0}
+.tl-c{display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;border:2px solid #dcdcd8;background:#ffffff;padding:10px 12px;font-family:inherit;cursor:pointer;min-width:0;transition:transform 0.15s,box-shadow 0.15s,filter 0.15s}
+.tl-c:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(28,37,86,0.16);filter:brightness(0.96)}
+.tl-c:active{transform:translateY(0);box-shadow:none}
+.tl-c:focus-visible{outline:3px solid #2b3060;outline-offset:2px}
 </style>
 </helmet>
 <div style="width:100%;box-sizing:border-box;background:#ffffff">
@@ -153,13 +156,9 @@ a:focus-visible{outline:3px solid #111111;outline-offset:3px}
 <div style="display:flex;flex-wrap:wrap;gap:24px 80px">
 <div style="flex:1 1 100%"><h2 class="lab" style="margin:0;padding-top:10px">Scenarios</h2></div>
 <div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:28px">
-<p style="margin:0;font-size:22px;line-height:1.55;max-width:760px">The same dashboard in every state. Pick a stage or move the day to see how the colour and message follow the repayment logic.</p>
+<p style="margin:0;font-size:22px;line-height:1.55;max-width:760px">The same dashboard in every state. Pick a stage to see how the colour and message follow the repayment logic.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">
 <sc-for list="{{chips}}" as="c" hint-placeholder-count="9"><button type="button" class="tl-c" onClick="{{c.pick}}" style="border-color:{{c.border}};background:{{c.bg}}"><span style="display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px"><span style="width:12px;height:12px;border-radius:50%;background:{{c.dot}}"></span>{{c.name}}</span><span style="font-size:13px;color:#5a5a57">{{c.days}}</span></button></sc-for>
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center">
-<label style="flex:1 1 280px;display:flex;flex-direction:column;gap:10px;font-size:15px"><span style="display:flex;justify-content:space-between"><b>Day since the Advance was received</b><b>{{day}}</b></span><input class="tl-r" type="range" min="1" max="110" step="1" value="{{day}}" onInput="{{setDay}}" aria-label="Day"></label>
-<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{progs}}" as="p" hint-placeholder-count="3"><button type="button" onClick="{{p.pick}}" style="height:40px;padding:0 16px;border:2px solid #2b3060;border-radius:20px;background:{{p.bg}};color:{{p.fg}};font-family:inherit;font-weight:600;font-size:14px;cursor:pointer">{{p.label}}</button></sc-for></div>
 </div>
 <div style="font-size:15px;color:#5a5a57">{{ruleText}}</div>
 
@@ -294,11 +293,12 @@ renderVals() {
   };
   const k = cards[key];
   const card = k ? { bg: k.c.bg, border: k.c.border, title: k.title, lines: k.lines.filter((l) => l.value), link: k.link, linkOn: !!k.link, note: k.note, count: k.count || '', countOn: !!k.count } : { bg: '#fff', border: '#ddd', title: '', lines: [], link: '', linkOn: false, note: '', count: '', countOn: false };
-  const chip = (id, name, days, cs, day, prog) => ({ name, days, dot: cs.dot, bg: key === id ? cs.bg : '#ffffff', border: key === id ? cs.dot : '#dcdcd8', pick: () => this.setState({ day, prog, paid: false, pay: 0 }) });
+  const on = (id) => key === id || (id === 'blue1' && key === 'blue2');
+  const chip = (id, name, days, cs, day, prog) => ({ name, days, dot: cs.dot, bg: on(id) ? cs.bg : '#ffffff', border: on(id) ? cs.dot : '#dcdcd8', pick: () => this.setState({ day, prog, paid: false, pay: 0 }) });
   const rules = {
     track: 'Day 1 to 60. When 100% of the minimum repayment is reached.',
-    blue1: 'Day 1 to 29. Blue status notification.',
-    blue2: 'Day 30 to 45. More than 60% left to repay for the minimum repayment. The blue status persists and the same state remains.',
+    blue1: 'Day 1 to 45. Blue status notification. It stays the same while more than 60% is left to repay for the minimum repayment.',
+    blue2: 'Day 1 to 45. Blue status notification. It stays the same while more than 60% is left to repay for the minimum repayment.',
     lilac: 'Day 30 to 45. Less than 60% left to repay for the minimum repayment. Lilac first reminder.',
     yellow: 'Day 46 to 60. Less than 100% repaid for the minimum repayment. Yellow second reminder.',
     red1: 'Days 61 to 76. Red contract breached notification I, with the days left shown as a countdown.',
@@ -306,7 +306,6 @@ renderVals() {
     term: 'Days 91 to 101. Red contract termination notification, with the days left shown as a countdown.',
     collections: 'Day 102 onward. The debt is sent to an external collections agency.'
   };
-  const progs = [['reached', 'Minimum repayment reached'], ['over', 'Over 40% of minimum repaid'], ['under', 'Under 40% of minimum repaid']].map((p) => ({ label: p[1], pick: () => this.setState({ prog: p[0] }), bg: st.prog === p[0] ? '#2b3060' : '#ffffff', fg: st.prog === p[0] ? '#ffffff' : '#2b3060' }));
   const steps = [
     { n: 1, title: 'Diagnosis', body: 'Journey mapping with every discipline in the room, before, during and after taking or issuing a loan.' },
     { n: 2, title: 'Spot painpoints', body: 'Summarising, voting and grouping what came up into six themes.' },
@@ -323,8 +322,8 @@ renderVals() {
   ];
   return {
     accent: this.props.accent ?? '#BA1414', steps, themes,
-    day: st.day, setDay: (e) => this.setState({ day: parseInt(e.target.value, 10) || 1, paid: false, pay: 0 }), progs, ruleText: rules[key],
-    chips: [chip('track', 'On track', 'Day 1-60', C.track, 20, 'reached'), chip('blue1', 'Blue status', 'Day 1-29', C.blue, 12, 'under'), chip('blue2', 'Blue persists', 'Day 30-45, over 60% left', C.blue, 38, 'under'), chip('lilac', 'Lilac reminder', 'Day 30-45, under 60% left', C.lilac, 38, 'over'), chip('yellow', 'Yellow reminder', 'Day 46-60', C.yellow, 52, 'under'), chip('red1', 'Red breached I', 'Days 61-76', C.red, 68, 'under'), chip('red2', 'Red breached II', 'Days 77-90', C.red, 83, 'under'), chip('term', 'Red termination', 'Days 91-101', C.red, 95, 'under'), chip('collections', 'Collections', 'Day 102 onward', C.grey, 102, 'under')],
+    day: st.day, ruleText: rules[key],
+    chips: [chip('track', 'On track', 'Day 1-60', C.track, 20, 'reached'), chip('blue1', 'Blue status', 'Day 1-45, over 60% left', C.blue, 12, 'under'), chip('lilac', 'Lilac reminder', 'Day 30-45, under 60% left', C.lilac, 38, 'over'), chip('yellow', 'Yellow reminder', 'Day 46-60', C.yellow, 52, 'under'), chip('red1', 'Red breached I', 'Days 61-76', C.red, 68, 'under'), chip('red2', 'Red breached II', 'Days 77-90', C.red, 83, 'under'), chip('term', 'Red termination', 'Days 91-101', C.red, 95, 'under'), chip('collections', 'Collections', 'Day 102 onward', C.grey, 102, 'under')],
     pageOn: key !== 'collections' && !st.pay, collectOn: key === 'collections' && !st.pay,
     payOn: st.pay > 0, payFormOn: st.pay === 1, payDoneOn: st.pay === 2,
     openPay: () => this.setState({ pay: 1 }), closePay: () => this.setState({ pay: 0 }), donePay: () => this.setState({ pay: 2 }), backPaid: () => this.setState({ pay: 0, paid: true }),
