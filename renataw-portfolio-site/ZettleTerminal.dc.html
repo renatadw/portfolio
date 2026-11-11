@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Zettle Terminal case study</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Nunito+Sans:wght@400;600&display=swap">
+<style>
+body{margin:0;background:#ffffff;color:#111111;font-family:'Nunito Sans',system-ui,sans-serif}
+a{color:inherit}
+a:focus-visible{outline:3px solid #111111;outline-offset:3px}
+.lab{font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#5a5a57}
+.shot{aspect-ratio:4 / 3;background:#efefec;border:2px dashed #b9b9b4;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box;font-size:16px;color:#5a5a57}
+</style>
+</helmet>
+<div style="width:100%;box-sizing:border-box;background:#ffffff">
+<div style="max-width:1200px;margin:0 auto;padding:0 32px;box-sizing:border-box">
+
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:28px 0">
+<a href="index.html" aria-label="Back to portfolio"><img src="assets/93b14b63745216105e5335d419886d8f.png" alt="rw" style="height:40px;width:auto;display:block"></a>
+<a href="index.html" style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;text-decoration:none;padding:10px 0">Back to selected work</a>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:28px;padding:72px 0 64px">
+<div class="lab">Case study, 2021</div>
+<h1 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:88px;line-height:0.98;letter-spacing:-0.03em;text-wrap:balance;max-width:980px">Zettle <span style="color:{{accent}}">Terminal</span></h1>
+<p style="margin:0;font-size:22px;line-height:1.5;max-width:720px;color:#2b2b29">An all-in-one device that helps sellers become truly mobile.</p>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 40px;border-top:2px solid #111111;padding:24px 0 72px">
+<div style="display:flex;flex-direction:column;gap:6px;padding:8px 0"><span class="lab">Role</span><span style="font-size:19px">Design manager, leading 6 designers</span></div>
+<div style="display:flex;flex-direction:column;gap:6px;padding:8px 0"><span class="lab">Team</span><span style="font-size:19px">Terminal, one of three teams under Hardware</span></div>
+<div style="display:flex;flex-direction:column;gap:6px;padding:8px 0"><span class="lab">My contribution</span><span style="font-size:19px">Backlogs and timelines, sharing pilot findings across the company, and hardware accessibility</span></div>
+</div>
+
+</div>
+
+<div style="background:#f6f6f4">
+<div style="max-width:1200px;margin:0 auto;padding:80px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px 80px;align-items:center">
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<div class="lab">Volume</div>
+<div style="font-family:'Jost',sans-serif;font-weight:600;font-size:140px;line-height:0.9;letter-spacing:-0.04em;color:{{accent}}">~10%</div>
+<p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">of Zettle's volume was processed on Terminal in 2024.</p>
+</div>
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<div class="lab">Launch</div>
+<div style="font-family:'Jost',sans-serif;font-weight:600;font-size:140px;line-height:0.9;letter-spacing:-0.04em">Nov 2021</div>
+<p style="margin:0;font-size:22px;line-height:1.45;max-width:480px">one of the first fully accessible terminals on the market, for seller and buyer.</p>
+</div>
+</div>
+</div>
+
+<div style="max-width:1200px;margin:0 auto;padding:96px 32px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:72px">
+
+
+
+<div style="display:flex;flex-wrap:wrap;gap:24px 80px">
+<div style="flex:0 0 200px"><h2 class="lab" style="margin:0;padding-top:10px">What sellers needed</h2></div>
+<div style="flex:1 1 480px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px">
+<sc-for list="{{needs}}" as="n" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #111111;padding-top:18px">
+<h3 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:26px;line-height:1.15">{{n.title}}</h3>
+<p style="margin:0;font-size:18px;line-height:1.5;color:#2b2b29">{{n.body}}</p>
+</div>
+</sc-for>
+</div>
+</div>
+
+
+
+<div style="display:flex;flex-wrap:wrap;gap:24px 80px">
+<div style="flex:0 0 200px"><h2 class="lab" style="margin:0;padding-top:10px">How we worked</h2></div>
+<p style="flex:1 1 480px;margin:0;font-size:22px;line-height:1.55;max-width:760px">We had to launch an all in one device that helps sellers become truly mobile. The Hardware team was incredibly senior, with a lot of experience building new hardware and running and compiling results from pilots. My part was helping them organise their backlog and timelines, building up their confidence to share the project's findings across the company, and making sure we had good support for hardware accessibility.</p>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-wrap:wrap;gap:24px 80px">
+<div style="flex:0 0 200px"><h2 class="lab" style="margin:0;padding-top:10px">Process</h2></div>
+<p style="flex:1 1 480px;margin:0;font-size:22px;line-height:1.55;max-width:760px">Eight steps from the first research rounds to the market rollout, with three partners along the way.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:36px 32px;padding-top:8px">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="8">
+<div style="display:flex;flex-direction:column;gap:10px;border-top:2px solid #111111;padding-top:16px">
+<span style="font-family:'Jost',sans-serif;font-weight:500;font-size:15px;letter-spacing:0.08em;color:{{accent}}">{{s.n}}</span>
+<h3 style="margin:0;font-family:'Jost',sans-serif;font-weight:600;font-size:24px;line-height:1.15">{{s.title}}</h3>
+<p style="margin:0;font-size:17px;line-height:1.5;color:#2b2b29">{{s.body}}</p>
+<sc-if value="{{s.partnerOn}}" hint-placeholder-val="{{ false }}"><span style="align-self:flex-start;font-size:13px;font-weight:600;letter-spacing:0.04em;border:1.5px solid #111111;border-radius:14px;padding:3px 12px">{{s.partner}}</span></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:24px 80px">
+<div style="flex:0 0 200px"><h2 class="lab" style="margin:0;padding-top:10px">Sound design</h2></div>
+<div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:28px;max-width:760px">
+<p style="margin:0;font-size:22px;line-height:1.55">The Terminal sounds were designed by Plan8. Together we picked twelve moments where sound helps, like a confirmed payment, a declined card or a locked session, so sellers and buyers can follow along without reading the screen.</p>
+<a href="https://plan8.co/work/zettle/" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;background:#f6f6f4;border:1px solid #dcdcd8;padding:28px 32px;text-decoration:none;color:#111111;box-sizing:border-box"><span style="display:flex;flex-direction:column;gap:6px;min-width:0"><span style="font-family:'Jost',sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.01em">Sounds by Plan8</span><span style="font-size:17px;line-height:1.5;color:#2b2b29">Hear the locking, unlocking, payment done and payment cancelled sounds on Plan8's case study.</span><span style="font-size:15px;color:#5a5a57">plan8.co/work/zettle</span></span><span style="font-family:'Jost',sans-serif;font-weight:500;font-size:17px;white-space:nowrap">Open the case study &rarr;</span></a>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-wrap:wrap;gap:24px 80px">
+<div style="flex:0 0 200px"><h2 class="lab" style="margin:0;padding-top:10px">The device</h2></div>
+<p style="flex:1 1 480px;margin:0;font-size:22px;line-height:1.55;max-width:760px">From the home screen to taking a payment and printing the receipt.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:40px 32px">
+<a href="https://www.youtube.com/watch?v=00LU2zrlL5U" style="grid-column:1 / -1;display:flex;flex-wrap:wrap;align-items:stretch;background:#111111;color:#ffffff;text-decoration:none;box-sizing:border-box">
+<span style="position:relative;flex:1 1 440px;min-width:0;display:block"><img src="assets/dd9718ffa0f57dc4994a4a13dc8ed037.jpg" alt="Introducing Zettle Terminal, title frame from the launch video" style="width:100%;height:100%;min-height:240px;object-fit:cover;display:block"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:{{accent}};display:inline-flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
+<span style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:40px;box-sizing:border-box"><span style="font-family:'Jost',sans-serif;font-weight:600;font-size:32px;letter-spacing:-0.01em">Watch the Terminal video</span><span style="font-size:19px;line-height:1.5;color:#e6e6e1;max-width:760px">Introducing Zettle Terminal, our new powerful, portable device that combines our latest card reader technology with our fast and efficient POS software.</span><span style="font-size:15px;color:#b9b9b4">Opens on YouTube</span></span>
+</a>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/01dc942ce792101bbbc550eab8c62304.webp" alt="Zettle Terminal front view showing the home screen with Settings, Updates, Tips and Zettle apps" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Terminal home screen</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/311425c25016ad93a7d5a21e1cbdeda5.webp" alt="Terminal on its base showing a product grid and a Charge button" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">On its base, with products and the charge button</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/4f335e0a193803cb4d467609347b35b6.webp" alt="Terminal showing 25.00 pounds with a prompt to tap or insert a card, with two cards beside it" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Tap or insert a card to pay</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><img src="assets/eaeddada653ab7fd0b15605a73bf22db.webp" alt="Zettle Terminal base printing a paper receipt" style="width:100%;height:auto;display:block;border:1px solid #dcdcd8"><span style="font-size:15px;color:#5a5a57">Printing a receipt</span></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-wrap:wrap;gap:24px 80px">
+<div style="flex:0 0 200px"><h2 class="lab" style="margin:0;padding-top:10px">Today</h2></div>
+<p style="flex:1 1 480px;margin:0;font-size:22px;line-height:1.55;max-width:760px">Terminal is still one of the main devices PayPal sells. As Zettle became PayPal Point of Sale, it was renamed PayPal Terminal, and it keeps the same all in one idea.</p>
+</div>
+<img src="assets/64a32b804c1cd1187cb11d2cc8c6e77b.jpg" alt="A seller holding the PayPal Terminal while a customer taps their phone to pay" style="width:100%;height:auto;display:block">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px">
+<a href="https://www.techradar.com/reviews/paypal-here-pos" style="display:flex;flex-direction:column;gap:14px;border-top:2px solid #111111;padding-top:18px;text-decoration:none;color:#111111"><span style="font-family:'Jost',sans-serif;font-weight:500;font-size:26px;line-height:1.25;letter-spacing:-0.01em">&ldquo;It is a standalone device that runs the PayPal Zettle app directly.&rdquo;</span><span style="font-size:15px;color:#5a5a57">TechRadar, review by Stefan Ionescu</span></a><a href="https://www.techradar.com/reviews/paypal-here-pos" style="display:flex;flex-direction:column;gap:14px;border-top:2px solid #111111;padding-top:18px;text-decoration:none;color:#111111"><span style="font-family:'Jost',sans-serif;font-weight:500;font-size:26px;line-height:1.25;letter-spacing:-0.01em">&ldquo;The built-in barcode scanner worked reliably during my test.&rdquo;</span><span style="font-size:15px;color:#5a5a57">TechRadar, review by Stefan Ionescu</span></a><a href="https://www.expertmarket.com/uk/merchant-accounts/zettle-review" style="display:flex;flex-direction:column;gap:14px;border-top:2px solid #111111;padding-top:18px;text-decoration:none;color:#111111"><span style="font-family:'Jost',sans-serif;font-weight:500;font-size:26px;line-height:1.25;letter-spacing:-0.01em">&ldquo;The PayPal Terminal is more than just a card machine, it is a handheld EPOS device.&rdquo;</span><span style="font-size:15px;color:#5a5a57">Expert Market UK, updated March 2026</span></a>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:24px 80px">
+<div style="flex:0 0 200px"><h2 class="lab" style="margin:0;padding-top:10px">Impact</h2></div>
+<div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;max-width:760px">
+<div style="font-size:21px;line-height:1.5;padding:18px 0;border-top:1px solid #dcdcd8">Built a fully accessible Terminal for both seller and buyer, one of the first on the market.</div>
+<div style="font-size:21px;line-height:1.5;padding:18px 0;border-top:1px solid #dcdcd8">Launched in November 2021.</div>
+<div style="font-size:21px;line-height:1.5;padding:18px 0;border-top:1px solid #dcdcd8">About 10% of Zettle's volume was processed on Terminal in 2024.</div>
+<div style="font-size:21px;line-height:1.5;padding:18px 0;border-top:1px solid #dcdcd8;border-bottom:1px solid #dcdcd8">Hired a senior full-time designer for the team.</div>
+</div>
+</div>
+
+</div>
+
+<div style="background:#111111;color:#ffffff">
+<div style="max-width:1200px;margin:0 auto;padding:72px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center">
+<div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="color:#b9b9b4">Next</span><a href="CaseStudy.dc.html" style="font-family:'Jost',sans-serif;font-weight:600;font-size:40px;letter-spacing:-0.02em;color:#ffffff;text-decoration:none">iZettle Capital: Defaults</a></div>
+<a href="index.html" style="font-family:'Jost',sans-serif;font-weight:500;font-size:18px;color:#ffffff;padding:12px 0">Back to selected work</a>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#BA1414","options":["#BA1414","#1F4FD8","#0B7A5B","#111111"]},"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic {
+renderVals() {
+  const needs = [
+    { title: 'All-in-one', body: 'A flexible device that does not depend on an iPad.' },
+    { title: 'Portability', body: 'Mobile connectivity, so sellers can move away from the counter.' },
+    { title: 'Table service', body: 'Sellers can go to where their customers are.' },
+    { title: 'Barcode scanning', body: 'Saves staff time entering inventory and helps them find products.' }
+  ];
+  const steps = [
+    { n: '01', title: 'User research', body: 'A series of user research rounds.', partner: '' },
+    { n: '02', title: 'Insights gathering', body: 'A competition overview and feedback from previous Zettle readers.', partner: '' },
+    { n: '03', title: 'Concept creation', body: 'Concepts developed in partnership with an agency.', partner: 'Above' },
+    { n: '04', title: 'Pilots', body: 'Validating the concepts and testing the device.', partner: '' },
+    { n: '05', title: 'Accessibility adjustments', body: 'Changes to the device with expert support.', partner: 'RNIB' },
+    { n: '06', title: 'Sound design', body: 'UX sounds developed with an agency.', partner: 'Plan8' },
+    { n: '07', title: 'Certification and production', body: 'Getting the device certified and into production.', partner: '' },
+    { n: '08', title: 'Market rollout', body: 'Starting with the UK and the EU.', partner: '' }
+  ].map((s) => ({ ...s, partnerOn: !!s.partner }));
+  return { accent: this.props.accent ?? '#BA1414', needs, steps };
+}
+}
+</script>
+</body>
+</html>
